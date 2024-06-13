@@ -14,7 +14,7 @@ abstract class Test extends ViewModel {
 
   final String description;
 
-  late bool _isExecuting;
+  bool _isExecuting = false;
   static const String isExecutingPropName = "isExecuting";
   bool get isExecuting => _isExecuting;
   set isExecuting(bool value) {
@@ -22,7 +22,7 @@ abstract class Test extends ViewModel {
         isExecutingPropName, _isExecuting, value, (v) => _isExecuting = v);
   }
 
-  late String _errorMessage;
+  String _errorMessage = "";
   static const String errorMessagePropName = "errorMessage";
   String get errorMessage => _errorMessage;
   set errorMessage(String value) {
