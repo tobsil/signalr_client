@@ -1,3 +1,7 @@
+## [1.3.9]
+
+* Improve code quality
+
 ## [1.3.8]
 
 * Upgrade sse_channel library to version 0.1.1

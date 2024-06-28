@@ -133,7 +133,7 @@ class TransportSendQueue {
   }
 
   _bufferData(Object? data) {
-    if (data is Uint8List && _buffer.length > 0 && !(_buffer[0] is Uint8List)) {
+    if (data is Uint8List && _buffer.isNotEmpty && !(_buffer[0] is Uint8List)) {
       throw GeneralError(
           "Expected data to be of type ${_buffer[0].runtimeType} but got Uint8List");
     } else if (data is String &&
