@@ -1,4 +1,7 @@
-  
+## [1.3.8]
+
+* Upgrade sse_channel library to version 0.1.1
+
 ## [1.3.7]
 
 * Update dependencies using http: ^1.1.0
