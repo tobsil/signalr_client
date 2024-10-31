@@ -343,7 +343,7 @@ class HubConnection {
   StreamController<Object?> streamControllable(String methodName, List<Object> args) {
     final t = _replaceStreamingParams(args);
     final invocationDescriptor =
-        _createStreamInvocation(methodName, args, t.item2);
+        _createStreamInvocation(methodName, args, t.keys.toList());
 
     late Future<void> promiseQueue;
     final StreamController streamController = StreamController<Object?>(
@@ -466,7 +466,7 @@ class HubConnection {
       _callbacks.remove(invocationDescriptor.invocationId);
     });
 
-    _launchStreams(t.item1, promiseQueue);
+    _launchStreams(t, promiseQueue);
 
     return completer.future;
   }
