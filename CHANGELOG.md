@@ -1,7 +1,3 @@
-## [1.4.0]
-
-* Fix websocket auth issues
-
 ## [1.3.9]
 
 * Improve code quality
